@@ -31,7 +31,7 @@ const App = () => {
 
     // Colors
     const black = rgb(0, 0, 0);
-    const gold = rgb(0.8, 0.6, 0.1);
+    const grey = rgb(0.4, 0.4, 0.4);
 
     // Load background image (stored locally in /public folder)
     const imageUrl = '/Qmbg.jpg'; // Path to local image
@@ -79,7 +79,7 @@ const App = () => {
 
       // Draw answer column
       page.drawRectangle({ x: startX + col1Width, y: yPos, width: col2Width, height: rowHeight, borderColor: black, borderWidth: 1 });
-      page.drawText(formData[Object.keys(formData)[i]], { x: startX + col1Width + 10, y: yPos + 7, size: 12, font, color: black });
+      page.drawText(formData[Object.keys(formData)[i]], { x: startX + col1Width + 10, y: yPos + 7, size: 14, font: regularFont, color: grey });
     });
 
     // Sender Information (Pre-filled)

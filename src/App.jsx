@@ -110,10 +110,10 @@ const App = () => {
   const recipientLastName = formData.lastName || "Unknown";
   const recipientFirstName = formData.firstName || "Unknown";
   const traceNumber = formData.traceNumber || "Unknown";
-  const fileName = `${recipientLastName}," "${recipientFirstName}_${traceNumber}.pdf`;
+  const fileName = `${recipientLastName}, ${recipientFirstName}_${traceNumber}.pdf`;
 
   // Save the PDF with the generated filename
-  saveAs(new Blob([pdfBytes], { type: "application/pdf" }), fileName);
+  saveAs(new Blob([pdfBytes], { type: "application/pdf" }),fileName);
   };
 
   return (

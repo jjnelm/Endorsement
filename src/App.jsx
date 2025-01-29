@@ -34,7 +34,7 @@ const App = () => {
     const grey = rgb(0.4, 0.4, 0.4);
 
     // Load background image (stored locally in /public folder)
-    const imageUrl = '/Qmbg.jpg'; // Path to local image
+    const imageUrl = '/Qmbg2.jpg'; // Path to local image
     const imageBytes = await fetch(imageUrl).then((res) => res.arrayBuffer());
     const img = await pdfDoc.embedJpg(imageBytes); // Use embedJpg() for JPG files
 

@@ -101,7 +101,7 @@ const App = () => {
     // Notes Section (Multiline)
     const notesY = height - 690;
     page.drawRectangle({ x: startX, y: notesY, width: col1Width + col2Width, height: 100, borderColor: black, borderWidth: 1 });
-    page.drawText(formData.notes, { x: startX + 10, y: notesY + 80, size: 12, font: regularFont, color: black });
+    page.drawText(formData.notes, { x: startX + 10, y: notesY + 80, size: 12, font: regularFont, color: black, maxWidth: 300 });
 
     // Save the PDF
     const pdfBytes = await pdfDoc.save();
@@ -128,7 +128,7 @@ const App = () => {
               {key.replace(/([A-Z])/g, " $1").toUpperCase()}:
             </label>
             <input
-              type="text"
+              type="textarea"
               name={key}
               value={formData[key]}
               onChange={handleChange}
